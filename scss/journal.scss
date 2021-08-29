@@ -1,0 +1,101 @@
+.journal {
+    &__list {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    &__item {
+        max-width: 28rem;
+        &:hover {
+            & .journal__icon {
+                transform: translateY(0rem);
+                visibility: visible;
+                opacity: 1;
+            }
+            & .journal__img img {
+                transform: translateX(2rem);
+                transition: all 0.2s linear;
+                filter: grayscale(100%);
+                z-index: 1;
+            }
+        }
+    }
+
+    &__img {
+        position: relative;
+        max-width: 100%;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 0.2s linear;
+        img {
+            transition: all 0.2s linear;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-color: #fff;
+        width: 5.5rem;
+        height: 4rem;
+        @include flex(center, center);
+        font-size: 1.4rem;
+        color: $text-gray;
+        font-weight: 200;
+        cursor: pointer;
+        transform: translateY(4rem);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.2s linear;
+    }
+
+    &__btn {
+        background-color: $btn-color;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        display: inline-block;
+        margin-top: 4rem;
+        cursor: pointer;
+    }
+
+    &__title {
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.3rem;
+        color: $text-color;
+        margin-top: 3rem;
+        cursor: pointer;
+        &:hover {
+            color: #f57250;
+        }
+    }
+
+    &__desc {
+        position: relative;
+        padding-left: 2rem;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: $text-gray;
+        padding-top: 2rem;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 1rem;
+            height: 1px;
+            background-color: #252525;
+            left: 0;
+            top: 2.7rem;
+        }
+        & span {
+            padding-left: 0.5rem;
+            cursor: pointer;
+            &:hover {
+                color: #f57250;
+            }
+        }
+    }
+
+
+}

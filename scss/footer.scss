@@ -1,0 +1,202 @@
+.footer {
+    background-color: #1e1e1e;
+    height: 38rem;
+    &__wrapper {
+        height: 8.5rem;
+        @include flex(center, space-between);
+    }
+    &__title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    }
+    &__subcribe {
+        width: 50%;
+        @include flex(center, space-between);
+        &-input {
+            width: 55%;
+            height: 3.4rem;
+            margin-left: 2rem;
+            @include flex(center, space-between);
+            background-color: #303030;
+            & input {
+                width: 50%;
+                background-color: transparent;
+                border: none;
+            }
+            & span {
+                font-size: 1.1rem;
+                text-transform: uppercase;
+                margin-right: 0.5rem;
+            }
+        }
+
+        &-btn {
+            margin-right: 2rem;
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+            cursor: pointer;
+        }
+
+    }
+
+    &__social {
+        display: flex;
+        &-icon {
+            margin-left: 1rem;
+            & i {
+                font-size: 1.2rem;
+                color: $text-gray;
+                transition: all 0.2s linear;
+            }
+            &:hover:nth-child(1) {
+                & i {
+                    color: #3b5998;
+                }
+            }
+            &:hover:nth-child(2) {
+                & i {
+                    color: #007bb6;
+                }
+            }
+            &:hover:nth-child(3) {
+                & i {
+                    color: #007bb6;
+                }
+            }
+            &:hover:nth-child(4) {
+                & i {
+                    color: #FE1F49;
+                }
+            }
+            &:hover:nth-child(5) {
+                & i {
+                    color: #CB2027;
+                }
+            }
+        }
+    }
+    &__list {
+        margin-top: 6rem;
+    }
+    &__logo {
+        width: 8rem;
+        height: 2rem;
+        margin-bottom: 2rem;
+    }
+    &__desc {
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 2rem;
+        width: 21rem;
+    }
+    &__name {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+        }
+    &__link {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: $text-gray;
+        margin-bottom: 1rem;
+        display: block;
+       
+    }
+    &__follow {
+        @include flex(center)
+    }
+    &__img {
+        width: 6rem;
+        height: 6rem;
+        position: relative;
+        margin: 0.5rem 1rem 0.5rem 0;
+        cursor: pointer;
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &:hover {
+            & .footer__overlay{
+                opacity: .65;
+                visibility: visible;
+            }
+            & .footer__insta {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    &__overlay {
+        background-color: #232323;
+        left: 0;
+        top: 0;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s linear;
+    }
+    &__insta {
+        position: absolute;
+        top: 35%;
+        right: 50%;
+        transform: translateX(50%);
+        font-size: 1.8rem;
+        color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s linear;
+
+    }   
+    &-line {
+        width: 100%;
+        height: 1px;
+        background-color: $text-gray;
+    }
+    &__end {
+        height: 13rem;
+        background-color:#000;
+        @include flex(center, space-between);
+        padding: 0 8.5rem;
+        &-desc {
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 2rem;
+        }
+    }
+}
+
+.scroll {
+    position: fixed;
+    right: 0%;
+    bottom: 20%;
+    transition: all 1s linear;
+    display: none;
+    color: $text-gray;
+    &:hover {
+        color: #f57250;
+       & i {
+        transform: translateY(-6px);
+       }
+    }
+    &-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: rotate(-90deg) translateX(-100%);
+    -webkit-transform: rotate(-90deg) translateX(-100%);
+    -moz-transform: rotate(-90deg) translateX(-100%);
+    -o-transform: rotate(-90deg) translateX(-100%);
+    }
+    & i {
+        margin-left: 2.3rem;
+        transition: all 1s linear;
+    }
+}
+.scroll__active {
+    display: block;
+}

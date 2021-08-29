@@ -1,0 +1,23 @@
+.commo{
+    padding-top: 13rem;
+    padding: 6rem;
+    @include flex(center, center, nowrap, column);
+    &__wrap {
+        width: 25rem;
+      
+    }
+    &__title {
+        font-size: 2.2em;
+        font-weight: 500;
+        color: $text-color;
+        text-align: center;
+        padding: 1rem;
+    }
+    &__desc {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 1.4rem;
+        font-weight: 400;
+        text-align: center;
+        color: $text-gray;
+    }
+}

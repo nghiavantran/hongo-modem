@@ -1,0 +1,128 @@
+.contact {
+    width: 100%;
+    height: 59rem;
+    margin-top: 17rem;
+    @include flex(center, space-between);
+    &__wrap {
+        width: 66.66666%;
+        height: 100%;
+        display: flex;
+    }
+    &__left {
+        width: 33.33333%;
+        height: 100%;
+        padding: 0;
+        &-image {
+             height: 100%;
+            //  width: 45rem;
+             
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &__mid {
+        width: 37.4444%;
+       height: 100%;
+       padding: 0;
+       background-color: $primary-color;
+       @include flex(center, center, nowrap,column);
+        &-item {
+            @include flex(center, center);
+            padding-bottom: 3rem;
+            & i {
+                font-size: 2rem;
+                color: $text-color;
+                padding-right: 3rem;
+                padding-bottom: 2rem;
+            }
+        }
+    
+        &-wrap {
+            width: 16rem;
+        }
+    
+        &-name {
+            font-size: 1.2em;
+            color: $text-color;
+            font-weight: 500;
+            padding-bottom: 1rem;
+        }
+    
+        &-info {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: $text-gray;
+            line-height: 2.2rem;
+            & span {
+                display: block;
+            }
+        }
+    }
+    &__right {
+        width: 62.5556%;
+        height: 100%;
+        padding: 0;
+        color: #fff;
+        position: relative;
+        &-image {
+            // width: 56rem;
+            height: 100%;
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        
+        &-wrap { 
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            background-color: rgba(36, 35, 35, 0.9);
+            @include flex(center, center, nowrap, column);
+        }
+
+        &-title { 
+            width: 70%;
+            font-size: 2.2em;
+            font-weight: 500;
+            line-height: 2.8rem;
+            margin-bottom: 3rem;
+        }
+        &-input { 
+            background-color: transparent;
+            color: $text-gray;
+            border: none;
+            border-bottom: 1px solid #484848;
+            width: 70%;
+            height: 5rem;
+            outline: none;
+            &:focus {
+                border-color: $text-gray;
+            }
+            &-message {
+                height: 8rem;
+                margin-bottom: 4rem;
+            }
+            &:nth-child(4) {
+                margin-bottom: 0;
+            }
+        }
+        &-btn { 
+            background-color:#fff;
+            color: $text-color;
+            margin-left: -48%;
+            font-size: 1.1rem;
+            font-weight: 500;
+            &:hover {
+                border-color: #fff;
+                background-color: transparent;
+                color: #fff;
+            }
+        }
+    }
+}

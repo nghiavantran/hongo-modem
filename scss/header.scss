@@ -1,0 +1,164 @@
+.active {
+    position: relative;
+    width: 100%;
+    color: $text-color;
+    &.header__mid-link::before{
+        width: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.4s ease-in;
+    }
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 7rem;
+    z-index: 10;
+    // background-color: $primary-color;
+    border-bottom: 1px solid #dcd3c8;
+    transition: all  0.3s linear;
+    &__wrapper{
+        @include flex (center, space-between);
+        height: 100%;
+        margin: auto;
+        background-color: transparent;
+        
+    }
+    &__mid {
+        &-list {
+            @include flex (center, center);
+        }
+        &-item {
+            cursor: pointer;
+            &:hover .header__mid-link::before{
+                width: 50%;
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 1;
+                visibility: visible;
+                transition: all  0.4s ease-in;
+            }        
+        }
+        &-link {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: $text-color;
+            padding: 0 2rem;
+            text-transform: uppercase;
+            position: relative;
+            &::before {
+                content:'';
+                position: absolute;
+                width: 0%;
+                height: 1px;
+                background-color: $text-color;
+                bottom: 0;
+                right: 0;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.4s ease-in;
+            }
+        }
+    }
+    &__left {
+        @include flex (center, center);
+        &-icon {
+            font-size: 1.3rem;
+            color: $text-color;
+            padding: 0 0.7rem;
+            cursor: pointer;
+        }
+    }
+    &__cart {
+        &-icon {
+            position: relative;
+            &:hover .header__cart-list {
+                opacity: 1;
+                visibility: visible;
+                transition: all  0.3s linear;
+            }
+        }
+        &-noti {
+            position: absolute;
+            /* padding: 0.5rem; */
+            width: 1.5rem;
+            height: 1.5rem;
+            color: #fff;
+            background-color: $btn-color;
+            border-radius: 50%;
+            line-height: 0.8rem;
+            font-size: 1rem;
+            top: -8px;
+            right: -3px;
+            text-align: center;
+            @include flex(center,center);
+            
+        }
+        &-list {
+            position: absolute;
+            width: 25rem;
+            height: 10rem;
+            background-color: $btn-color;
+            top: 50%;
+            right: 0;
+            transform: translateY(35%);
+            color: $text-gray;
+            @include flex(center,center);
+            flex-direction: column;
+            font-size: 1.2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all  0.3s linear;
+           
+        }
+        &-desc {
+            padding-top: 1rem;
+            font-weight: 300;
+        }
+    }
+}
+
+.logo {
+    width: 105px;
+    height: 25px;
+    &__image {
+        background-image: url(../images/logo.png);
+       width: 100%;
+       height: 100%;
+    }
+}
+
+.sticky {
+    position: fixed;
+    background-color: #000;
+    transition: all  0.3s linear;
+    border-bottom: 1px solid #000;
+    & .logo__image {
+        background-image: url(../images/white-logo.png);
+        width: 100%;
+        height: 100%;
+    }
+    & .header__mid-link {
+        color: #fff;
+    }
+    & .active {
+        color: $text-gray;
+    }
+    & .header__mid-link::before {
+        background-color:  $text-gray;
+    }
+    & .header__left-icon {
+        color:#fff;
+    }
+    & .header__left-icon:hover{ 
+        color: $text-gray;
+        transition: all  0.2s ease-in;
+    }
+}
+.navbar__icon {
+    display: none;
+}

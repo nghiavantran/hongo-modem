@@ -1,0 +1,34 @@
+.endow {
+    &__wrap {
+        padding: 6rem 0;
+        width: 100%;
+        @include flex(center);
+    }
+}
+.shipping,
+.money__back,
+.gift {
+    width: 33.3333%;
+    @include flex(center, center);
+    font-size: 1.2rem;
+    color: $text-gray;
+    position: relative;
+    height: 28px;
+    white-space: nowrap;
+}
+
+.money__back::after,
+.shipping::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background-color: $text-gray;
+    right: 0;
+}
+.shipping i,
+.money__back i,
+.gift i{
+    font-size: 2rem;
+    padding-right: 2rem;
+}
