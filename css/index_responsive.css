@@ -252,8 +252,8 @@
         width: 85%;
     }
     .about__name-hongo {
-        margin-top: 72rem;
-        margin-bottom: 8rem;
+        margin-top: 68rem;
+        margin-bottom: 5rem;
     }
     .testimonial {
         padding-top: 0;
@@ -270,6 +270,7 @@
     }
     .contact { 
         flex-direction: column;
+        margin-top: 6rem;
     }
     .commo__wrap {
         width: 15rem;
